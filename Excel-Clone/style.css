@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.extreme-outer-container {
+    width: 100vw;
+    height: 100vh;
+    min-width: 900px;
+    min-height: 754px;
+}
+
+/**! 5% height given to heading container **/
+
+.heading-container {
+    width: 100%;
+    height: 5%;
+    background-color: #107C41;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+/**! 6% height given to navbar container **/
+
+.navbar-container {
+    width: 100%;
+    height: 6%;
+    background-color: #f3f2f1;
+    display: flex;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    color: #444;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.navbar-item {
+    padding: 10px 30px;
+    height: 100%;
+    cursor: pointer;
+    margin-right: 10px;
+    letter-spacing: 0.235px;
+    position: relative;
+}
+
+.navbar-item.selected::after {
+    width: 100%;
+    position: absolute;
+    content: '';
+    border-bottom: 4px solid #107C41;
+    transform: scaleX(0.5);
+    transition: transform 250ms ease-in;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar-item:hover {
+    letter-spacing: 0;
+    background-color: #edebe9;
+    font-weight: bold;
+}
+
+.navbar-item.selected:hover:after {
+    transform: scaleX(1);
+}
+
+/**! 7% height given to menu-icon container **/
+
+.menu-icon-container {
+    width: 100%;
+    height: 7%;
+    background-color: #f3f2f1;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-icon:hover {
+    background-color: #edebe9;
+}
+
+.menu-selector {
+    outline: none;
+    border-radius: none;
+    border: 1px solid #107C41;
+    height: 28px;
+    cursor: pointer;
+}
+
+#font-family {
+    font-family: 'Noto Sans';
+}
+
+.menu-selector::selection {
+    color: #107C41;
+}
+
+.menu-selector:first-child {
+    border-right: none;
+}
+
+/**! 5% height given to formula-bar container **/
+.formula-bar-conatainer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    background-color: #f3f2f1;
+}
+
+.formula-bar-input {
+    outline: none;
+}
+
+.cell-info {
+    width: 7%;
+    margin: 0 1%;
+}
+
+.function {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.formula-bar {
+    width: calc(100% - 7% - 20px);
+    margin: 0 1%;
+}
+
+.formula-bar-input {
+    width: 100%;
+    height: 20px;
+    border: 1px solid transparent;
+    padding: 0 2px;
+}
+
+.cell-info .formula-bar-input:focus, 
+.cell-info .formula-bar-input:hover {
+    border: 1px solid #107C41;
+}
+
+.data-container {
+    height: 73%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select-all {
+    width: 40px;
+    height: 25px;
+    display: flex;
+}
+
+.inside-triangle {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background-color: #9b9a9a;
+}
+
+.column-names {
+    width: calc(100% - 40px);
+    height: 25px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.column {
+    font-family: 'Lato';
+    width: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 100%;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-right: 0.5px solid #dfdfdf;
+    color: #767676;
+}
+
+.row-names {
+    width: 40px;
+    height: calc(100% - 25px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-right: 1px solid #bbbbbb;
+}
+
+.row {
+    font-family: 'Lato';
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-bottom: 0.5px solid #dfdfdf;
+    color: #767676;
+}
+
+.row:hover,
+.column:hover {
+    cursor: pointer;
+    background-color: #107c4167;
+}
+
+.actual-data {
+    width: calc(100% - 40px);
+    height: calc(100% - 25px);
+    cursor: cell;
+    overflow: scroll;
+}
+
+.cell-row {
+    display: flex;
+}
+
+.input-cell {
+    height: 25px;
+    width: 100px;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-bottom: 1px solid #d4d4d4;
+    border-right: 1px solid #d4d4d4;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-family: 'Lato';
+    overflow: hidden;
+}
+
+.input-cell.selected {
+    border: 2px solid #107C41;
+}
+
+.input-cell.top-selected {
+    border-top: none;
+}
+
+.input-cell.bottom-selected {
+    border-bottom: none;
+    border-bottom: 0.5px solid #d4d4d4;
+}
+
+.input-cell.left-selected {
+    border-left: none;
+}
+
+.input-cell.right-selected {
+    border-right: none;
+    border-right: 0.5px solid #d4d4d4;
+}
