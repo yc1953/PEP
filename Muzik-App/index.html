@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>Muzik</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar" style="background-color: #fff; color: #090a09;">
+            <div class="menu-icon">
+                <span class="material-icons menu-toggle-btn">
+                    menu
+                </span>
+            </div>
+            <div class="logo-container">
+                <h1 class="logo-heading primary-heading">MUZIK</h1>
+            </div>
+            <div class="search-bar-container">
+                <div class="search-icon-container">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="input-bar-container">
+                    <input type="text" class="search-bar" placeholder="Search">
+                </div>
+            </div>
+            <div class="dark-mode-container">
+                <!-- <span class="material-icons mode-change-icon">
+                    light_mode
+                </span> -->
+                <span class="material-icons mode-change-icon">
+                    dark_mode
+                </span>
+            </div>
+        </div>
+        <div class="dashboard-container">
+            <div class="selection-area">
+                <div class="section-heading">Library</div>
+                <div class="sections-container">
+                    <div class="section-item selected">
+                        <span class="material-icons icon">
+                            home
+                        </span>
+                        Home
+                    </div>
+                    <div class="section-item">
+                        <span class="material-icons icon">
+                            playlist_play
+                        </span>
+                        Playlists
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="music-area">
+                <div class="music-section-container">
+                    <div class="music-heading">
+                        <h3 class="music-section-heading">Trending Now</h3>
+                    </div>
+                    <div class="music-items-list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="current-playing-song">
+            <div class="progress-bar-container">
+                <div class="progress-bar">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="song-info-container">
+                <div class="song-details">
+                    <audio src="" id="audio" preload="auto"></audio>
+                    <div class="song-icon">
+                        <img src="https://m.media-amazon.com/images/I/91Xt5BefDrL._AA256._SX354_SY354_BL0_QL100_.jpg"
+                            alt="Legend" class="music-icon">
+                    </div>
+                    <div class="song-artist-details">
+                        <div class="music-item-name seek-name">Legend</div>
+                        <div class="music-item-artist seek-artist">Sidhu Moosewala</div>
+                    </div>
+                </div>
+
+                <div class="song-controls">
+                    <span class="material-icons ctrl-icons prev-btn" style="font-size: 2rem;">
+                        skip_previous
+                    </span>
+                    <span class="material-icons ctrl-icons play-btn" style="font-size: 3rem;">
+                        play_circle
+                    </span>
+                    <span class="material-icons ctrl-icons next-btn" style="font-size: 2rem;">
+                        skip_next
+                    </span>
+                </div>
+
+                <div class="duration-details">
+                    <div class="current-time">
+                        <span class="currentTime">--:--</span>/<span class="totalDuration">--:--</span>
+                    </div>
+                </div>
+
+                <div class="more-options">
+                    <div class="material-icons">
+                        <span class="material-icons-outlined three-dots">
+                            more_horiz
+                        </span>
+                    </div>
+                </div>
+
+                <div class="volume-controls">
+                    <div class="volume-control-btn">
+                        <span class="material-icons volume-btn">
+                            volume_up
+                        </span>
+
+                        
+                    </div>
+                    <!-- <span class="material-icons">
+                        volume_down
+                    </span>
+                    <span class="material-icons">
+                        volume_mute
+                    </span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
